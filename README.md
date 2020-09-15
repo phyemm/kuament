@@ -1,4 +1,4 @@
-# NoteBoo
+# 学习笔记
 * 实际上，如果Vue仅仅依赖getter与setter，是无法做到在数组调用push,pop等方法时候触发数据响应的，因此Vue实际上是通过劫持这些方法，对这些方法进行包装变异来实现的。
 ```
 var original = arrayProto[method];
