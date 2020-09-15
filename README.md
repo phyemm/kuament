@@ -1,5 +1,5 @@
 # NoteBoo
-实际上，如果Vue仅仅依赖getter与setter，是无法做到在数组调用push,pop等方法时候触发数据响应的，因此Vue实际上是通过劫持这些方法，对这些方法进行包装变异来实现的。
+* 实际上，如果Vue仅仅依赖getter与setter，是无法做到在数组调用push,pop等方法时候触发数据响应的，因此Vue实际上是通过劫持这些方法，对这些方法进行包装变异来实现的。
 ```
 var original = arrayProto[method];
   def(arrayMethods, method, function mutator () {
@@ -25,9 +25,4 @@ var original = arrayProto[method];
     ob.dep.notify();
     return result
   });
-
-作者：前端进击者
-链接：https://juejin.im/post/6854573211422572557
-来源：掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 ```
