@@ -1,9 +1,9 @@
 <!--
- * @FilePath: \U-UCAREd:\NoteBook\three-demo\demo\src\views\Ground.vue
+ * @FilePath: \U-UCAREd:\NoteBook\three-demo\demo\src\views\line.vue
  * @Author: huangzq
  * @Date: 2020-09-18 17:24:36
  * @LastEditors: huangzq
- * @LastEditTime: 2020-09-23 14:23:05
+ * @LastEditTime: 2020-09-23 14:25:59
 -->
 <template>
   <div id="container"></div>
@@ -15,7 +15,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 import Stats from "three/examples/jsm/libs/stats.module.js";
-
+let RollMat;
 export default {
   data() {
     return {
@@ -128,16 +128,6 @@ export default {
     },
     //region 放置天空盒
     addSkybox() {
-      //   let urls = [
-      //     "image/star_sky/right.jpg", // right
-      //     "image/star_sky/left.jpg", // left
-      //     "image/star_sky/top.jpg", // top
-      //     "image/star_sky/bottom.jpg", // bottom
-      //     "image/star_sky/front.jpg", // front
-      //     "image/star_sky/back.jpg", // back
-      //   ];
-
-      //   this.scene.background = new THREE.CubeTextureLoader().load(urls);
       var skyMap = new THREE.TextureLoader().load("/ground/image/星空球2.jpg");
       this.scene.background = skyMap;
     },
@@ -160,12 +150,15 @@ export default {
         let gltfLoader = new GLTFLoader();
         gltfLoader.setPath(`/`);
         gltfLoader.load(
-          `ground/HT科幻地面.gltf`,
+          `line/科幻数字线条.gltf`,
           async (obj) => {
-            let RollMat = new THREE.MeshStandardMaterial();
+            // obj.scene.scale.set(5, 5, 5);
+            // obj.scene.position.set(0, 0, 0);
+            console.log(obj);
+            RollMat = new THREE.MeshStandardMaterial();
 
             this.texture = await new THREE.TextureLoader().load(
-              "image/kehuandimian.png"
+              "image/line.png"
             );
 
             RollMat.map = this.texture;

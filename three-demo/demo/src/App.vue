@@ -3,7 +3,7 @@
  * @Author: huangzq
  * @Date: 2020-09-18 16:59:52
  * @LastEditors: huangzq
- * @LastEditTime: 2020-09-18 18:07:42
+ * @LastEditTime: 2020-09-28 11:40:02
 -->
 <template>
   <div id="app">
@@ -12,14 +12,17 @@
 </template>
 
 <style>
+html,
 body {
+  width: 100%;
+  height: 100%;
   margin: 0;
-  padding: 0;
-}
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  overflow: hidden;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+#app {
   color: #2c3e50;
 }
 </style>

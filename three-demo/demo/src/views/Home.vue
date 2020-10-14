@@ -1,7 +1,8 @@
 <template>
   <div id="nav">
     <router-link to="/ground">科幻地面流光</router-link>
-    <router-link to="/home">About</router-link>
+    <router-link to="/line">科幻数字线条</router-link>
+    <router-link to="/earth">科幻地球</router-link>
   </div>
 </template>
 
