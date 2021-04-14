@@ -1,10 +1,4 @@
-/*
- * @FilePath: \深圳稽查局项目\web\src\utils\request.js
- * @Author: huangzq
- * @Date: 2020-07-21 09:12:54
- * @LastEditors: huangzq
- * @LastEditTime: 2020-08-10 10:57:36
- */
+
 import axios from 'axios'
 class Request {
   constructor() {
